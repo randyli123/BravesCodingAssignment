@@ -1,0 +1,54 @@
+<!-- Randy Li's MousePos Assignement	 -->
+	
+	<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Mouse Position Display</title>
+</head>
+
+<body>
+
+	<p>The mouse is located at position (<span id='#xPos'></span>,<span id='#yPos'></span>), and is <span id='#dist'></span> pixels from the lower-left corner.</p>
+
+</body>
+</html>
+
+<script>
+
+	document.addEventListener("mousemove", function(event) {
+	
+	//updates the x and y values and puts returns them into an array
+	let xy = updateXY(document);
+
+	//calculates the 
+	var body = document.body,
+    html = document.documentElement;
+	var height = Math.max( body.scrollHeight, body.offsetHeight, 
+                       html.clientHeight, html.scrollHeight, html.offsetHeight );
+
+	//gets the x and y from the array
+	//Subtracts the y value from the height to get the distance from the lower left corner
+	let dist = Math.sqrt(xy[0]**2 + (height - xy[1])**2);
+	document.getElementById('#dist').innerHTML = dist;
+
+});
+
+//Gets x and y from mouse position. returns an array holding the 2 values
+function updateXY(document){
+
+	var x = document.getElementById('#xPos').innerHTML = event.pageX;
+	var y = document.getElementById('#yPos').innerHTML = event.pageY;
+
+	return [x,y];
+}
+</script>
+
+
+<!-- Errors Found 
+	- $ refers to JQuery which is not downloaded so changed the language to just vanilla JavaScript
+	- passed in the 'document' into the updateXY 
+	- returned an array of x and y so it can be accesssed by the distance forumla
+	- distance formula used finds distance from UPPER left corner not lower left 
+	  decided to implement find distance from lower left instead of just changing the text to 'upper left corner'
+-->
