@@ -2,7 +2,9 @@
 
 ## Assignment 1
 Fixed the code in the MousePos.html file in this github. 
+
 Comments inside files of the errors I found
+
 Used base html and JavaScript
 
 ## Assignment 2
