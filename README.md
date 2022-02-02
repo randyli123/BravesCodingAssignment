@@ -1,9 +1,9 @@
 # BravesCodingAssignment
 
 ## Assignment 1
-Fixed the code in the MousePos.html file in this github. 
+Fixed the code in the MousePos.html file located in this github. 
 
-Comments inside files of the errors I found
+Comments inside file of the errors I found.
 
 Used base html and JavaScript
 
