@@ -1,4 +1,4 @@
-# BravesCodingAssignment
+# Braves Coding Assignment / Randy Li
 
 ## Assignment 1
 Fixed the code in the MousePos.html file located in this github. 
